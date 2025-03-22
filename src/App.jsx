@@ -1,7 +1,9 @@
+import Features from "./pages/Features";
+
 function App() {
   return (
     <div>
-      <div className="text-pink-500 font-bold">Hello Carbon Crunch</div>
+      <Features />
     </div>
   );
 }
