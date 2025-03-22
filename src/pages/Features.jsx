@@ -17,7 +17,7 @@ const Features = ({ scrollToHero }) => {
             {featuresList.map((feature, index) => (
               <div
                 key={index}
-                className="p-6 bg-white rounded-lg shadow-lg min-h-[250px]"
+                className="p-6 bg-white rounded-lg shadow-lg min-h-[250px] hover:bg-gray-100 hover:min-h-[255px] hover: border border-gray-300 hover:cursor-pointer"
               >
                 <FaCube className="text-green-500 text-4xl mb-4" />
                 <h3 className="text-xl font-bold text-green-500">
@@ -29,9 +29,9 @@ const Features = ({ scrollToHero }) => {
           </div>
           <button
             onClick={scrollToHero}
-            className="absolute bottom-5 animate-bounce"
+            className="absolute  bottom-5 left-1/2 transform -translate-x-1/2 animate-bounce"
           >
-            <FaArrowDown className="text-green-500 text-3xl" />
+            <FaArrowDown className="text-green-500 text-3xl flex justify-center" />
           </button>
         </section>
       </div>
