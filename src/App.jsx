@@ -1,12 +1,27 @@
+import React, { useRef } from "react";
 import Features from "./pages/Features";
 import Hero from "./pages/Hero";
-import ParallaxSlider from "./pages/ParallaxSlider";
 
 function App() {
+  const featuresRef = useRef(null);
+  const heroRef = useRef(null);
+
+  const scrollToHero = () => {
+    heroRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToFeatures = () => {
+    featuresRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <div>
-      <Features />
-      <Hero />
+    <div className="overflow-hidden">
+      <div ref={featuresRef}>
+        <Features scrollToHero={scrollToHero} />
+      </div>
+      <div ref={heroRef}>
+        <Hero scrollToFeatures={scrollToFeatures} />
+      </div>
     </div>
   );
 }

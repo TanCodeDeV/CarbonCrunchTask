@@ -1,7 +1,8 @@
 import { featuresList } from "../utils/Constants";
 import { FaCube } from "react-icons/fa";
+import { FaArrowDown, FaArrowUp } from "react-icons/fa";
 
-const Features = () => {
+const Features = ({ scrollToHero }) => {
   return (
     <div className="bg-gray-100 h-auto min-h-screen flex flex-col items-center justify-start text-white py-6">
       <h3 className="text-green-500 bg-white border border-gray-300 rounded-4xl px-10 py-2 w-fit shadow-lg">
@@ -26,6 +27,12 @@ const Features = () => {
               </div>
             ))}
           </div>
+          <button
+            onClick={scrollToHero}
+            className="absolute bottom-5 animate-bounce"
+          >
+            <FaArrowDown className="text-green-500 text-3xl" />
+          </button>
         </section>
       </div>
     </div>
