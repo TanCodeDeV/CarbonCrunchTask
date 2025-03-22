@@ -3,7 +3,7 @@ import { FaCube } from "react-icons/fa";
 
 const Features = () => {
   return (
-    <div className="bg-gray-300 h-auto min-h-screen flex flex-col items-center justify-start text-white py-6">
+    <div className="bg-gray-100 h-auto min-h-screen flex flex-col items-center justify-start text-white py-6">
       <h3 className="text-green-500 bg-white border border-gray-300 rounded-4xl px-10 py-2 w-fit shadow-lg">
         FEATURES
       </h3>
